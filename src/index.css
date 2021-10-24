@@ -917,7 +917,7 @@
    display: inline-block;
  }
  .loading-item {
-   height: 5rem;
+   height: 3rem;
    width: 100%;
    background: white;
    display: flex;
