@@ -1,18 +1,18 @@
 import React from 'react';
-
 import { PureTaskList } from './TaskList';
 import * as TaskStories from './Task.stories';
 
 export default {
     component: PureTaskList,
     title: 'TaskList',
-    decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>],
+    decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>]
 };
 
 const Template = args => <PureTaskList {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+    text: 'Jest results in Storybook',
     // Shaping the stories through args composition.
     // The data was inherited from the Default story in task.stories.js.
     tasks: [
@@ -23,6 +23,9 @@ Default.args = {
         { ...TaskStories.Default.args.task, id: '5', title: 'Task 5' },
         { ...TaskStories.Default.args.task, id: '6', title: 'Task 6' },
     ],
+};
+Default.parameters = {
+    jest: ['TaskList.test.js'],
 };
 
 export const WithPinnedTasks = Template.bind({});
