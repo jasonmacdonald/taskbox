@@ -156,8 +156,6 @@
  }
  input[type="search"] {
    -webkit-appearance: textfield;
-   -webkit-box-sizing: content-box;
-   -moz-box-sizing: content-box;
    box-sizing: content-box;
  }
  input[type="search"]::-webkit-search-decoration {
@@ -207,7 +205,9 @@
    word-break: break-all;
    -ms-word-break: break-all;
    word-break: break-word;
-   hyphens: auto;
+   -webkit-hyphens: auto;
+       -ms-hyphens: auto;
+           hyphens: auto;
  }
  .type-light {
    font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -315,6 +315,15 @@
    color: #333;
    outline: none;
  }
+ input[type="text"] ::-webkit-input-placeholder, input[type="email"] ::-webkit-input-placeholder, input[type="password"] ::-webkit-input-placeholder, textarea ::-webkit-input-placeholder {
+   color: #778b91;
+ }
+ input[type="text"] :-ms-input-placeholder, input[type="email"] :-ms-input-placeholder, input[type="password"] :-ms-input-placeholder, textarea :-ms-input-placeholder {
+   color: #778b91;
+ }
+ input[type="text"] ::-ms-input-placeholder, input[type="email"] ::-ms-input-placeholder, input[type="password"] ::-ms-input-placeholder, textarea ::-ms-input-placeholder {
+   color: #778b91;
+ }
  input[type="text"] ::placeholder,
  input[type="email"] ::placeholder,
  input[type="password"] ::placeholder,
@@ -365,6 +374,7 @@
    speak: none;
    font-style: normal;
    font-weight: normal;
+   font-feature-settings: normal;
    font-variant: normal;
    text-transform: none;
    line-height: 1;
@@ -408,11 +418,11 @@
  }
  @font-face {
    font-family: "percolate";
-   src: url("./assets/icon/percolate.eot?-5w3um4");
-   src: url("./assets/icon/percolate.eot?#iefix5w3um4") format("embedded-opentype"),
-     url("./assets/icon/percolate.woff?5w3um4") format("woff"),
-     url("./assets/icon/percolate.ttf?5w3um4") format("truetype"),
-     url("./assets/icon/percolate.svg?5w3um4") format("svg");
+   src: url(../../static/media/percolate.944f04e6.eot);
+   src: url(../../static/media/percolate.944f04e6.eot?#iefix5w3um4) format("embedded-opentype"),
+     url(../../static/media/percolate.19e89b87.woff) format("woff"),
+     url(../../static/media/percolate.fae78e19.ttf) format("truetype"),
+     url(../../static/media/percolate.1527b5e7.svg) format("svg");
    font-weight: normal;
    font-style: normal;
  }
@@ -422,6 +432,7 @@
    speak: none;
    font-style: normal;
    font-weight: normal;
+   font-feature-settings: normal;
    font-variant: normal;
    text-transform: none;
    line-height: 1;
@@ -863,7 +874,7 @@
    overflow: hidden;
    text-overflow: ellipsis;
    white-space: nowrap;
-   flex: 1;
+   flex: 1 1;
  }
  .list-item input[type="text"] {
    background: transparent;
@@ -1012,3 +1023,5 @@
    vertical-align: top;
    max-width: 100%;
  }
+
+/*# sourceMappingURL=main.1d2fba24.chunk.css.map*/
