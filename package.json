@@ -27,6 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test  --json --outputFile=./src/.jest-test-results.json || true",
+    "test:ci": "react-scripts test --ci --reporters='default' --reporters='./github-actions-reporter'",
     "test:update": "react-scripts test -u",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
